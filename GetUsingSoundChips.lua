@@ -45,6 +45,7 @@ local chipMatchTable	= {
 	"n163",		"Namco 163",	19,
 	"s5b",		"Sunsoft 5B",	69,
 }
+local fdsRomFormat	= 3	-- emu.getRomInfo().format
 
 function chips.getUsingSoundChips()
 	local log	= emu.getLogWindowLog()
@@ -55,6 +56,8 @@ function chips.getUsingSoundChips()
 	for i=1,#chipMatchTable,3 do
 		info[chipMatchTable[i]]	= false
 	end
+
+	info["fds"]	= emu.getRomInfo().format == fdsRomFormat
 
 	for i=#lines,1,-1 do
 		if(find(lines[i], "^%-%-%-%-%-") ~= nil)then

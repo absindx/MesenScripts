@@ -4,7 +4,7 @@
 chips	= require("GetUsingSoundChips")
 
 -- Get chips info
-chipInfo	= chips.GetUsingSoundChips()
+chipInfo	= chips.getUsingSoundChips()
 
 -- Dump info table
 for k,v in pairs(chipInfo)do
