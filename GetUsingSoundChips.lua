@@ -7,7 +7,6 @@ local chips	= {}
 --------------------------------------------------
 
 local find	= string.find
-local gsub	= string.gsub
 local match	= string.match
 
 local function split(str, delimiter)
