@@ -15,6 +15,11 @@ See [sample](Sample/GetINesInfoSample.lua).
 
 See [sample](Sample/GetUsingSoundChipsSample.lua).  
 
+### [GetExtraApuInfo.lua](GetExtraApuInfo.lua)  
+
+Get note number and value written to APU register.  
+See [sample](Sample/GetExtraApuInfoSample.lua).  
+
 ## Utility  
 
 ### [ElapsedCycleLog.lua](ElapsedCycleLog.lua)  
