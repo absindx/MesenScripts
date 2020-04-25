@@ -5,7 +5,21 @@
 -- Idea 2: emu.getRomInfo().path, parse iNES header
 --------------------------------------------------
 
-local ines	= {}
+--[[
+	emuex.getINesInfo()
+		Returns iNES header information.
+
+		mapper: int
+		sub: int
+		prgRom: int
+		chrRom: int
+		mirroring: int (emuex.mirroringType)
+		battery: bool
+]]
+
+--------------------------------------------------
+
+emuex	= emuex	or {}
 
 --------------------------------------------------
 
@@ -35,12 +49,12 @@ end
 
 --------------------------------------------------
 
-ines.mirroringType	= {
+emuex.mirroringType	= {
 	horizontal	= 0,
 	vertical	= 1,
 }
 
-function ines.getINesInfo()
+function emuex.getINesInfo()
 	local log	= emu.getLogWindowLog()
 	local lines	= split(log, "\n")
 	local info	= {}
@@ -85,7 +99,7 @@ function ines.getINesInfo()
 			setIntKey("saveRam", value1)
 		elseif(logMatch("Mirroring:%s*(%w+)"))then
 			value1			= string.lower(value1)
-			info["mirroring"]	= ines.mirroringType[value1]
+			info["mirroring"]	= emuex.mirroringType[value1]
 		elseif(logMatch("Battery:%s*(%w+)"))then
 			setYesNoKey("battery", value1)
 		elseif(logMatch("trainer:%s*(%w+)"))then
@@ -106,4 +120,4 @@ function ines.getINesInfo()
 	return info
 end
 
-return ines
+return emuex

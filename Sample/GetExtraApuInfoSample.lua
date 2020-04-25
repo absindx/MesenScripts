@@ -1,7 +1,7 @@
 -- Copy the GetExtraApuInfo.lua to the Mesen directory
 
 -- Load module
-apuex	= require("GetExtraApuInfo")
+emuex	= require("GetExtraApuInfo")
 
 -- Dump utility
 local drawStringYPosition	= 0
@@ -23,7 +23,7 @@ end
 
 function dumpApuExInfo()
 	-- Get apu info
-	apuInfo	= apuex.getExtraApuInfo()
+	apuInfo	= emuex.getExtraApuInfo()
 
 	-- Dump info table
 	resetDrawStringPosition()

@@ -2,7 +2,21 @@
 -- Get using sound chips info
 --------------------------------------------------
 
-local chips	= {}
+--[[
+	emuex.getUsingSoundChips()
+		Returns the extended sound chip information used in the currently opened nes or nsf file.
+
+		vrc6: bool
+		vrc7: bool
+		fds: bool
+		mmc5: bool
+		n163: bool
+		s5b: bool
+]]
+
+--------------------------------------------------
+
+emuex	= emuex	or {}
 
 --------------------------------------------------
 
@@ -46,7 +60,7 @@ local chipMatchTable	= {
 }
 local fdsRomFormat	= 3	-- emu.getRomInfo().format
 
-function chips.getUsingSoundChips()
+function emuex.getUsingSoundChips()
 	local log	= emu.getLogWindowLog()
 	local lines	= split(log, "\n")
 	local info	= {}
@@ -88,4 +102,4 @@ function chips.getUsingSoundChips()
 	return info
 end
 
-return chips
+return emuex

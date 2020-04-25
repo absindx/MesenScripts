@@ -1,10 +1,10 @@
 -- Copy the GetINesInfo.lua to the Mesen directory
 
 -- Load module
-ines	= require("GetINesInfo")
+emuex	= require("GetINesInfo")
 
 -- Get iNES info
-romInfo	= ines.getINesInfo()
+romInfo	= emuex.getINesInfo()
 
 -- Dump info table
 for k,v in pairs(romInfo)do
@@ -16,6 +16,6 @@ mapper	= 4
 sub	= 0
 prgRom	= 16
 chrRom	= 8
-mirroring	= 1
+mirroring	= 1	-- emuex.mirroringType.vertical
 battery	= false
 ]]

@@ -3,8 +3,8 @@
 --------------------------------------------------
 
 --[[
-	apuex.getExtraApuInfo()
-		Returns a table with additional information added to the emu.getState().apu
+	emuex.getExtraApuInfo()
+		Returns a table with additional information added to the emu.getState().apu .
 
 		square1: {
 			registers: {
@@ -167,9 +167,9 @@ end
 -- API
 --------------------------------------------------
 
-local apuex	= {}
+emuex	= emuex	or {}
 
-function apuex.getExtraApuInfo()
+function emuex.getExtraApuInfo()
 	local apu	= emu.getState().apu
 
 	setApuInfo_Square1(apu)
@@ -181,4 +181,4 @@ function apuex.getExtraApuInfo()
 	return apu
 end
 
-return apuex
+return emuex

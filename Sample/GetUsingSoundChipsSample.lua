@@ -1,10 +1,10 @@
 -- Copy the GetUsingSoundChips.lua to the Mesen directory
 
 -- Load module
-chips	= require("GetUsingSoundChips")
+emuex	= require("GetUsingSoundChips")
 
 -- Get chips info
-chipInfo	= chips.getUsingSoundChips()
+chipInfo	= emuex.getUsingSoundChips()
 
 -- Dump info table
 for k,v in pairs(chipInfo)do
