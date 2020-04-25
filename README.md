@@ -1,4 +1,4 @@
-# Mesen scripts  
+# [Mesen](https://github.com/SourMesen/Mesen) scripts  
 
 Junk.  
 
@@ -19,6 +19,10 @@ See [sample](Sample/GetUsingSoundChipsSample.lua).
 
 Get note number and value written to APU register.  
 See [sample](Sample/GetExtraApuInfoSample.lua).  
+
+### [GetScreenSize.lua](GetScreenSize.lua)  
+
+See [sample](Sample/GetScreenSizeSample.lua).  
 
 ## Utility  
 
